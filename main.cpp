@@ -7,14 +7,17 @@
 #include <iostream>
 #include <new>
 
+//Não precisar usar o std::
 using namespace std;
 
 int main(){
     //Permite usar acentos
     setlocale(LC_ALL,"");
 
+    //Declaração de variáveis
     int x1, x2, y1, y2, x, y;
 
+    //Requisitar os pontos do retângulo ao usuário
     cout << "Entre com o ponto X1 que determina o retângulo:  " << endl;
     cin >> x1;
 
@@ -27,12 +30,14 @@ int main(){
     cout << "Entre com o ponto Y2 que determina o retângulo:  " << endl;
     cin >> y2;
 
+    //Requisitar o ponto de verificação
     cout << "Entre com o ponto X para testar se pertence ao Retângulo: " << endl;
     cin >> x;
 
     cout << "Entre com o ponto Y para testar se pertence ao Retângulo: " << endl;
     cin >> y;
 
+    //Verificar localização do ponto no retângulo
     if(x == x1 || x == x2){
       if(y >= y1 && y <= y2){
         cout << "O ponto esta na borda do retângulo" << endl;
